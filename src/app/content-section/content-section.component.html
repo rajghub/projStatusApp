@@ -1,0 +1,142 @@
+<!--Generating Badges  -->
+<div class="container-fluid">
+
+  
+
+  <div class="card-deck ">
+    <div class="card text-center ">
+      <div class="card-header bg-secondary text-white">HTML</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+    <div class="card text-center ">
+      <div class="card-header bg-secondary text-white">TECH</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+
+    <div class="card text-center ">
+      <div class="card-header">EDITORIAL</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+
+    <div class="card text-center ">
+      <div class="card-header">QA</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+
+    <div class="card text-center ">
+      <div class="card-header">PM</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+
+    <div class="card text-center ">
+      <div class="card-header">CLIENT</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+
+    <div class="card text-center ">
+      <div class="card-header">CLOSED</div>
+      <div class="card-body">
+        <app-badge></app-badge>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<!-- <div class="container-fluid">
+  <div class="row ">
+    <div class="card md-2 text-center rounded border ">
+      <app-badge></app-badge>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 text-center rounded border">
+      <app-badge></app-badge>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+      <app-badge></app-badge>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+      <app-badge></app-badge>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+      <app-badge></app-badge>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+      <app-badge></app-badge>
+    </div>
+  </div>
+</div> -->
+
+<!--Spacing  -->
+<div class="row v_spacing"></div>
+
+<!--New project button  -->
+
+
+<!--Project Status table  -->`
+<div class="container-fluid">
+  <div class="row">
+    <div>
+      <button type="button" class="btn btn-primary" routerLink="/newProject"><i class="fa fa-plus"> </i>&nbsp;Add New Project</button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-calculator"> </i>&nbsp;Effort Calculator</button>
+    </div>
+  </div>
+  <div class="row" class="text-center">
+    <h5 style="color:#23B7E5">CURRENT PROJECT STATUS</h5>
+  </div>
+  <div class="row">
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>ProjectId</th>
+          <th>Project Name</th>
+          <th>Task</th>
+          <th>Resource</th>
+          <th>Current Status</th>
+          <th>Requirements</th>
+          <th>Issues/Concerns</th>
+          <th>Remarks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <tr *ngFor="let proDetails of projectDetails">
+          <td>{{proDetails.projectId}}</td>
+          <td>{{proDetails.projectName}}</td>
+          <td>{{proDetails.task}}</td>
+          <td>{{proDetails.resource}}</td>
+          <td>{{proDetails.currentStatus}}</td>
+          <td>{{proDetails.requirements}}</td>
+          <td>{{proDetails.issues}}</td>
+          <td>{{proDetails.remarks}}</td>
+          <td><button type="button" class="btn btn-link btn-sm" title="History" routerLink="/projectHistory"><i class="fa fa-history" style="color:black"> </i></button>
+            <button type="button" class="btn btn-link" title="Archive"><i class="fa fa-archive"> </i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
