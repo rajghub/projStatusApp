@@ -7,9 +7,10 @@ import { ProjectDetailsService } from './../project-details.service';
   styleUrls: ['./content-section.component.css']
 })
 export class ContentSectionComponent implements OnInit {
-  projectDetails;
-  constructor(service: ProjectDetailsService) {
-    this.projectDetails = service.getProjectDetails();
+  projectDetails: Array<any>;
+  constructor(private _dataService: ProjectDetailsService) {
+    this._dataService.getProjectDetails()
+      .subscribe(res => this.projectDetails = res);
   }
 
   ngOnInit() {

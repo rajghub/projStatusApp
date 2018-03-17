@@ -1,15 +1,31 @@
 const express = require('express');
-const app = express();
+const bodyParser = require('body-parser');
 const path = require('path');
+const http = require('http');
+const app = express();
 
-app.use(express.static(__dirname + '/dist'));
+// API file for interacting with MongoDB
+const api = require('./server/routes/api');
 
-app.listen(process.env.PORT || 8080);
+// Parsers
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false}));
 
-//Path Location Strategy
+// Angular DIST output folder
+app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/*', function(req, res){
+// API location
+app.use('/api', api);
 
-    res.sendFile(path.join(__dirname+'/dist/index.html'));
-})
+// Send all other requests to the Angular app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
 
+//Set Port
+const port = process.env.PORT || '3000';
+app.set('port', port);
+
+const server = http.createServer(app);
+
+server.listen(port, () => console.log(`Running on localhost:${port}`));

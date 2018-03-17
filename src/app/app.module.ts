@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { ProjectDetailsService } from './project-details.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,11 +33,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
       {
         path: 'projectDetails',
         component: ContentSectionComponent
@@ -53,7 +52,6 @@ import { HomeComponent } from './home/home.component';
         component: ProjectHistoryComponent
 
       }
-
     ])
   ],
   providers: [
