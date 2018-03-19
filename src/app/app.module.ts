@@ -15,6 +15,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { AddNewProjectComponent } from './add-new-project/add-new-project.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+  import { BasicDetailsService } from './basic-details.service';
 
 
 
@@ -32,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
+
+  BrowserModule,
     HttpModule,
     RouterModule.forRoot([
       {
@@ -55,7 +57,7 @@ import { HomeComponent } from './home/home.component';
     ])
   ],
   providers: [
-    ProjectDetailsService
+    ProjectDetailsService, BasicDetailsService
   ],
   bootstrap: [AppComponent]
 })

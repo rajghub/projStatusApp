@@ -42,4 +42,22 @@ router.get('/projectDetails', (req, res) => {
     });
 });
 
+
+// Get basicData details
+
+router.get('/basicData', (req, res) => {
+    connection((db) => {
+        db.collection('basicData')
+        .find()
+        .toArray()
+        .then((projectDetails) => {
+            response.data = projectDetails;
+            res.json(response);
+        })
+        .catch((err) => {
+            sendError(err, res);
+        })
+    })
+})
+
 module.exports = router;

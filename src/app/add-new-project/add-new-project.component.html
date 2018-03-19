@@ -19,31 +19,28 @@
       <input type="text" class="form-control input-lg" id="validationDefault02" placeholder="Project Names" value="" required>
     </div>
 
+<!-- <pre>{{basicDetails[2].DeliveryType | json}}</pre> -->
     <!-- Delivery Type -->
     <div class="col-md-2 mb-3">
       <label for="validationDefault02">Delivery Type</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-      <option>Emailer</option>
-      <option>iDetail</option>
-      <option>Website</option>
-      <option>eDetail</option>
+      <select class="form-control">
+      <option *ngFor="let dType of basicDetails[2].DeliveryType ">{{dType}}</option>
     </select>
     </div>
 
     <!--Platform  -->
     <div class="col-md-2 mb-3">
       <label for="validationDefault02">Platform</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-      <option>Veeva</option>
-      <option>SFDC</option>
-      <option>MI</option>
+      <select class="form-control">
+      <option *ngFor="let platform of basicDetails[3].Platforms">{{platform}}</option>
+
     </select>
     </div>
 
     <!--Project Manager  -->
     <div class="col-md-2 mb-3">
       <label for="validationDefault02">Project Manager</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <select class="form-control">
       <option>Renjith</option>
       <option>Mandar</option>
       <option>Arun</option>
@@ -115,31 +112,29 @@
       <input type="text" class="form-control input-lg" id="validationDefault02" placeholder="Project Names" value="" required>
     </div>
 
+  
     <!-- Delivery Type -->
     <div class="col-md-2 mb-3">
       <label for="validationDefault02">Delivery Type</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-      <option>Emailer</option>
-      <option>iDetail</option>
-      <option>Website</option>
-      <option>eDetail</option>
+      <select class="form-control">
+      <option *ngFor="let dType of basicDetails[2].DeliveryType ">{{dType}}</option>
     </select>
     </div>
 
     <!--Platform  -->
+    <!--Platform  -->
     <div class="col-md-2 mb-3">
       <label for="validationDefault02">Platform</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-      <option>Veeva</option>
-      <option>SFDC</option>
-      <option>MI</option>
+      <select class="form-control">
+      <option *ngFor="let platform of basicDetails[3].Platforms">{{platform}}</option>
+
     </select>
     </div>
 
     <!--Project Manager  -->
     <div class="col-md-2 mb-3">
       <label for="validationDefault02">Project Manager</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <select class="form-control">
       <option>Renjith</option>
       <option>Mandar</option>
       <option>Arun</option>
