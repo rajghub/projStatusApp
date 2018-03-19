@@ -1,8 +1,10 @@
 <div class="card ">
   <div class="card-header">
-    Project Details
+    <h5>Add New Project</h5>
   </div>
+  <!-- <pre>Dummy comment - {{basicDetails[0] | json}}</pre> -->
   <div class="card-body">
+
     <form>
       <div class="form-row">
         <!--Project ID  -->
@@ -18,13 +20,21 @@
           <input type="text" class="form-control input-lg" id="validationDefault02" placeholder="Project Names" value="" required>
         </div>
 
-        <!-- <pre>{{basicDetails[0].DeliveryType | json}}</pre> -->
+        <!-- Client -->
+        <div class="col-md-2 mb-3">
+          <label for="validationDefault02">Client</label>
+          <select class="form-control">
+            <option *ngFor="let clients of basicDetails[0].Clients">{{clients}}</option>
+          </select>
+        </div>
+
+
         <!-- Delivery Type -->
         <div class="col-md-2 mb-3">
           <label for="validationDefault02">Delivery Type</label>
           <select class="form-control">
-      <option *ngFor="let dType of basicDetails[0].DeliveryType ">{{dType}}</option>
-    </select>
+            <option *ngFor="let dType of basicDetails[0].DeliveryType ">{{dType}}</option>
+          </select>
         </div>
 
         <!--Platform  -->
@@ -59,125 +69,14 @@
           <input type="Date" class="form-control" id="validationDefault02" value="" required>
         </div>
 
-        <div class="col-md-1 mb-3">
-
-        </div>
-
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Client Delivery Date</label>
-          <input type="Date" class="form-control" id="validationDefault02" value="" required>
-        </div>
-
-        <!-- <div class="col-md-3 mb-3">
-      <label for="validationDefaultUsername">Username</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend2">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2"
-          required>
-      </div>
-    </div> -->
       </div>
 
 
-      <button class="btn btn-cyan" type="submit">Add Project</button>
-      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <!-- <button type="button" class="btn btn-primary">Secondary</button> -->
     </form>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
-
-
-
-
-<div class="row">
-  <div class="col-md-8" style="border:1px solid #000">
-    <form>
-      <div class="form-row">
-        <!--Project ID  -->
-
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault01">Project ID</label>
-          <input type="text" class="form-control input-sm" id="validationDefault01" placeholder="Project ID" value="" required>
-        </div>
-
-        <!--Project Name  -->
-        <div class="col-md-3 mb-3">
-          <label for="validationDefault02">Project Name</label>
-          <input type="text" class="form-control input-lg" id="validationDefault02" placeholder="Project Names" value="" required>
-        </div>
-
-
-        <!-- Delivery Type -->
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Delivery Type</label>
-          <select class="form-control">
-      <option *ngFor="let dType of basicDetails[2].DeliveryType ">{{dType}}</option>
-    </select>
-        </div>
-
-        <!--Platform  -->
-        <!--Platform  -->
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Platform</label>
-          <select class="form-control">
-      <option *ngFor="let platform of basicDetails[3].Platforms">{{platform}}</option>
-
-    </select>
-        </div>
-
-        <!--Project Manager  -->
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Project Manager</label>
-          <select class="form-control">
-      <option>Renjith</option>
-      <option>Mandar</option>
-      <option>Arun</option>
-    </select>
-        </div>
-
-        <!--Start Date  -->
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Start Date</label>
-          <input type="Date" class="form-control" id="validationDefault02" value="" required>
-        </div>
-
-
-
-        <!-- Client Delivery Date  -->
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Client Delivery Date</label>
-          <input type="Date" class="form-control" id="validationDefault02" value="" required>
-        </div>
-
-        <div class="col-md-1 mb-3">
-
-        </div>
-
-        <div class="col-md-2 mb-3">
-          <label for="validationDefault02">Client Delivery Date</label>
-          <input type="Date" class="form-control" id="validationDefault02" value="" required>
-        </div>
-
-        <!-- <div class="col-md-3 mb-3">
-      <label for="validationDefaultUsername">Username</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend2">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2"
-          required>
-      </div>
-    </div> -->
-      </div>
-
-
-      <button class="btn btn-cyan" type="submit">Add Project</button>
-      <button type="button" class="btn btn-secondary">Secondary</button>
-    </form>
-
+    Card footer Section
   </div>
 </div>
