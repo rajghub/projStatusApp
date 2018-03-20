@@ -1,7 +1,12 @@
 <div class="container-fluid">
 
   <div class="card">
-    <h5 class="card-header">Project Name : Indegene sitecore</h5>
+    <div class="card-header">
+      <div class="row">
+        <div class="col-sm-6">Project Name : Indegene sitecore</div>
+        <div class="col-sm-6"><button class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#exampleModalCenter">Update Status</button></div>
+      </div>
+    </div>
     <div class="card-body">
       <table class="table table-bordered table-condensed bg-white">
         <tr>
@@ -111,8 +116,9 @@
 
       </div>
     </div>
-  </div>
 
+
+  </div>
 
 
 
@@ -121,3 +127,8 @@
   <!--Date wise project status history  -->
 
 </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <app-modal-window></app-modal-window>
+  </div>
