@@ -15,7 +15,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { AddNewProjectComponent } from './add-new-project/add-new-project.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-  import { BasicDetailsService } from './basic-details.service';
+import { BasicDetailsService } from './basic-details.service';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 
 
@@ -36,12 +36,16 @@ import { ModalWindowComponent } from './modal-window/modal-window.component';
   ],
   imports: [
 
-  BrowserModule,
+    BrowserModule,
     HttpModule,
     RouterModule.forRoot([
       {
         path: 'projectDetails',
         component: ContentSectionComponent
+      },
+      {
+        path: 'home',
+        component: HomeComponent
       },
       {
         path: 'login',
@@ -54,7 +58,10 @@ import { ModalWindowComponent } from './modal-window/modal-window.component';
       {
         path: 'projectHistory',
         component: ProjectHistoryComponent
-
+      },
+      {
+        path: '**',
+        component: LoginPageComponent
       }
     ])
   ],
