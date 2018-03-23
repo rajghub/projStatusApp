@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BasicDetailsService } from './basic-details.service';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
+import { ProjectSnapshotComponent } from './project-snapshot/project-snapshot.component';
 
 
 
@@ -32,7 +33,8 @@ import { ModalWindowComponent } from './modal-window/modal-window.component';
     LoginPageComponent,
     AddNewProjectComponent,
     HomeComponent,
-    ModalWindowComponent
+    ModalWindowComponent,
+    ProjectSnapshotComponent
   ],
   imports: [
 

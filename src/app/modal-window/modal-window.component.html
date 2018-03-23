@@ -1,3 +1,5 @@
+<pre></pre>
+
 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
   <div class="modal-content">
     <div class="modal-header">
@@ -19,9 +21,9 @@
           <!--Project ID  -->
 
           <div class="col-md-3 mb-3">
-            <label for="validationDefault01">Task</label>
+            <label for="validationDefault01">Current Stage</label>
             <select class="form-control">
-            <option >Today's Task</option>
+            <option *ngFor="let tsks of basicDetails[0].Tasks">{{tsks}}</option>
           </select>
           </div>
 
@@ -35,7 +37,7 @@
           <div class="col-md-3 mb-3">
             <label for="validationDefault02">Current Status</label>
             <select class="form-control">
-            <option>Addressing comments</option>
+            <option *ngFor="let cstatus of basicDetails[0].Tasks">{{cstatus}}</option>
           </select>
           </div>
 

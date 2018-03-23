@@ -1,0 +1,11 @@
+th, td{
+    font-size: 12px;
+}
+
+.widthEqual{
+    width: 6%;
+}
+
+.normalWidth{
+    width: 10%;
+}

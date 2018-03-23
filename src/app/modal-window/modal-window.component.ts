@@ -1,3 +1,4 @@
+import { BasicDetailsService } from '../basic-details.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal-window.component.css']
 })
 export class ModalWindowComponent implements OnInit {
+  basicDetails;
 
-  constructor() { }
+  constructor(private _dataservice: BasicDetailsService) {
+    this._dataservice.getBasicDetails()
+      .subscribe(res => this.basicDetails = res);
+  }
 
   ngOnInit() {
   }
