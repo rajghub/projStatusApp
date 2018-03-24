@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-snapshot.component.css']
 })
 export class ProjectSnapshotComponent implements OnInit {
+  title1 = 'Snapshot title';
 
   constructor() { }
 
