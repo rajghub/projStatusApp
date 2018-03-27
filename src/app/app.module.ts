@@ -18,6 +18,9 @@ import { HomeComponent } from './home/home.component';
 import { BasicDetailsService } from './basic-details.service';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { ProjectSnapshotComponent } from './project-snapshot/project-snapshot.component';
+import { ResourceCentreComponent } from './resource-centre/resource-centre.component';
+import { ResourceComponent } from './resource-centre/resource/resource.component';
+import { ResourceTopicsComponent } from './resource-centre/resource-topics/resource-topics.component';
 
 
 
@@ -34,7 +37,10 @@ import { ProjectSnapshotComponent } from './project-snapshot/project-snapshot.co
     AddNewProjectComponent,
     HomeComponent,
     ModalWindowComponent,
-    ProjectSnapshotComponent
+    ProjectSnapshotComponent,
+    ResourceCentreComponent,
+    ResourceComponent,
+    ResourceTopicsComponent
   ],
   imports: [
 
@@ -61,6 +67,11 @@ import { ProjectSnapshotComponent } from './project-snapshot/project-snapshot.co
         path: 'projectHistory',
         component: ProjectHistoryComponent
       },
+      {
+        path: 'resourceCentre',
+        component: ResourceCentreComponent
+      },
+
       {
         path: '**',
         component: LoginPageComponent

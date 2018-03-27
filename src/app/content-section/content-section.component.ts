@@ -8,6 +8,7 @@ import { ProjectDetailsService } from './../project-details.service';
 })
 export class ContentSectionComponent implements OnInit {
   projectDetails: Array<any>;
+  // parentVar = 'I am from parent';
   constructor(private _dataService: ProjectDetailsService) {
     this._dataService.getProjectDetails()
       .subscribe(res => this.projectDetails = res);

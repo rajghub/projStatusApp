@@ -1,0 +1,7 @@
+.card {
+    margin-bottom: 30px;
+}
+
+.cardShadow{
+    box-shadow:5px 5px 20px grey;
+}

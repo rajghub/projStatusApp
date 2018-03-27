@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { StringDecoder } from 'string_decoder';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-snapshot',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectSnapshotComponent implements OnInit {
   title1 = 'Snapshot title';
+  // @Input() childVar: string;
 
   constructor() { }
-
   ngOnInit() {
   }
 
