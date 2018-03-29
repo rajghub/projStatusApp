@@ -21,6 +21,7 @@ import { ProjectSnapshotComponent } from './project-snapshot/project-snapshot.co
 import { ResourceCentreComponent } from './resource-centre/resource-centre.component';
 import { ResourceComponent } from './resource-centre/resource/resource.component';
 import { ResourceTopicsComponent } from './resource-centre/resource-topics/resource-topics.component';
+import { DeveloperAvailabilityComponent } from './developer-availability/developer-availability.component';
 
 
 
@@ -40,7 +41,8 @@ import { ResourceTopicsComponent } from './resource-centre/resource-topics/resou
     ProjectSnapshotComponent,
     ResourceCentreComponent,
     ResourceComponent,
-    ResourceTopicsComponent
+    ResourceTopicsComponent,
+    DeveloperAvailabilityComponent
   ],
   imports: [
 
@@ -70,6 +72,10 @@ import { ResourceTopicsComponent } from './resource-centre/resource-topics/resou
       {
         path: 'resourceCentre',
         component: ResourceCentreComponent
+      },
+      {
+        path: 'developerAvailability',
+        component: DeveloperAvailabilityComponent
       },
 
       {
